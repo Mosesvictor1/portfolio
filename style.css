@@ -657,6 +657,7 @@
 .about-container p {
   padding-block: 20px;
   text-align: start;
+  font-size: 90%;
 }
 
 .about-left-right {
@@ -664,7 +665,7 @@
 }
 .about-left {
   height: 490px;
-  width: 500px;
+  width: 100%;
 }
 .about-left img {
   height: 100%;
