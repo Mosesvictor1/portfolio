@@ -502,9 +502,14 @@
 .about-container h1 {
   font-size: 20px;
 }
-.ab {
+.re-use {
   padding-bottom: 10px;
-  width: 100%;
+}
+.re-use::before{
+  content: "";
+  width: 12%;
+  height: 9%;
+  bottom: 0;
 }
 .about-container p {
   padding-block: 20px;
@@ -650,10 +655,17 @@
 .about-container h1 {
   font-size: 20px;
 }
-.ab {
+
+.re-use {
   padding-bottom: 10px;
-  width: 100%;
 }
+.re-use::before{
+  content: "";
+  width: 27%;
+  height: 9%;
+  bottom: 0;
+}
+
 .about-container p {
   padding-block: 20px;
   text-align: start;
@@ -751,6 +763,58 @@
   }
 
   /* Mobile L Hero section end */
+
+   /* ============== Mobile L About Section Start ================ */
+
+.about-container {
+  margin-block: 5%;
+}
+.about-container h1 {
+  font-size: 20px;
+}
+
+.re-use {
+  padding-bottom: 10px;
+}
+.re-use::before{
+  content: "";
+  width: 28%;
+  height: 9%;
+  bottom: 0;
+}
+.about-container p {
+  padding-block: 20px;
+  text-align: start;
+  font-size: 70%;
+}
+
+.about-left-right {
+  gap: 20px;
+}
+.about-left {
+  height: 490px;
+  width: 100%;
+}
+.about-left img {
+  height: 100%;
+  width: 100%;
+}
+.about-right h1 {
+  font-size: 90%;
+  padding-bottom: 1px;
+}
+
+.info-row {
+  gap: 30px;
+}
+.info-row .col-lg-6 ul {
+  gap: 18px;
+}
+
+.info-row .col-lg-6 ul li strong {
+  margin-right: 5px;
+}
+/* ============== Mobile L About Section end ================ */
 }
 
 /* ============= Mobile L screen End =============== */
