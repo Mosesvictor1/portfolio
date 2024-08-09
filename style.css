@@ -247,7 +247,7 @@
   border-radius: 50%;
   color: var(--nav-text-color);
   font-size: 20px;
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 5%;
   z-index: 999;
@@ -264,7 +264,7 @@
   border-radius: 50%;
   color: var(--nav-text-color);
   font-size: 20px;
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 5%;
   display: none;
