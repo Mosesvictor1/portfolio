@@ -134,7 +134,7 @@ section {
   padding-right: 2%;
 } */
 #All-Body-Section section {
-  padding-left: 390px;
+  padding-left: 340px;
 }
 #hero {
   width: 100%;
@@ -813,6 +813,7 @@ section {
 
   .facts-container p {
     font-size: 90%;
+    font-weight: 500;
   }
   .facts-count {
     grid-template-columns: 1fr 1fr;
@@ -991,6 +992,7 @@ section {
     padding-block: 20px;
     text-align: start;
     font-size: 90%;
+    font-weight: 400;
   }
 
   .about-left-right {
@@ -1028,7 +1030,7 @@ section {
 
   .facts-container p {
     font-size: 80%;
-    font-weight: 300;
+    font-weight: 400;
   }
   .facts-count {
     display: flex;
@@ -1081,6 +1083,7 @@ section {
     font-style: italic;
     text-align: justify;
     font-size: 80%;
+    font-weight: 400;
   }
 
   .sk {
@@ -1209,7 +1212,7 @@ section {
 
   .facts-container p {
     font-size: 70%;
-    font-weight: 300;
+    font-weight: 400;
     text-align: start;
   }
   .facts-count {
@@ -1253,6 +1256,7 @@ section {
     font-style: italic;
     text-align: start;
     font-size: 70%;
+    font-weight: 400;
   }
 
   .sk {
