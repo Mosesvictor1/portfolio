@@ -135,6 +135,7 @@ section {
 } */
 #All-Body-Section section {
   padding-left: 340px;
+  padding-right: 2%;
 }
 #hero {
   width: 100%;
@@ -441,7 +442,315 @@ section {
   }
 }
 
-/* ============== Skills Section start================ */
+/* ============== Skills Section end================ */
+
+/* ============== Resume Section Start ================ */
+.resume-sheet {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 10px;
+  gap: 30px;
+}
+.resume-left,
+.resume-right {
+  width: 48%;
+}
+
+.resume-title {
+  font-size: 20px;
+}
+.summary-conc h3 {
+  font-size: 100%;
+  font-weight: 600;
+  color: #282828;
+}
+.summary-conc p {
+  font-size: 90%;
+}
+.summary-conc ul {
+  list-style-type: circle;
+  padding-left: 19px;
+  color: black;
+}
+.summary-conc ul li {
+  list-style-type: circle;
+  color: black;
+  margin-bottom: 10px;
+}
+/* ============== Resume Section end ================ */
+
+/* ============== Project Section start ================ */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 39px;
+  padding: 30px;
+}
+.project-grid .project-image {
+  background-color: transparent;
+  width: 350px;
+  height: 250px;
+}
+.data {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project-grid .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--bg-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 1s;
+  padding: 0.2rem;
+}
+.data:hover .project-content {
+  height: 100%;
+  opacity: 1;
+}
+.data:hover .project-image img {
+  transform: scale(1.2);
+}
+
+.project-content big {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nav-text-color);
+  text-shadow: 0 0 10px #000;
+}
+.project-content p {
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 0 10px #000;
+  margin: 5px 2px 15px 2px;
+  color: var(--nav-text-color);
+}
+.project-content a i {
+  background: var(--button-color);
+  color: #fefffe;
+  font-size: 2rem;
+  font-weight: 900;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 10px;
+}
+/* ============== Project Section end ================ */
+
+/* ============== Services Section start ================ */
+
+#services-section {
+  background-color: var(--bg2-color);
+  padding-block: 3%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+  padding-block: 5%;
+}
+.services-list {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 4%;
+  transition: 1s;
+}
+
+.services-icon i {
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--nav-text-color);
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  transition: 0.5s;
+}
+.services-list:hover .services-icon i {
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+}
+
+.services-name h2 {
+  color: var(--paragraph-color);
+  font-weight: 600;
+}
+.services-name p {
+  font-size: 14px;
+}
+
+/* ============== Testimonial Section start ================ */
+#testimonial-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slide-container {
+  /* max-width: 1120px; */
+  width: 100%;
+  /* background-color: gray; */
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  row-gap: 5px;
+  position: relative;
+  padding: 25px 0;
+}
+.slide-content {
+  margin: 30px 40px;
+  /* background-color: red; */
+  overflow: hidden;
+  border-radius: 25px;
+}
+/* .card-wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: red ;
+} */
+.card {
+  border-radius: 25px;
+  background-color: var(--bg2-color);
+  width: 40%;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 25px 25px 0 35px;
+}
+.overlay::before,
+.overlay::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--bg-color);
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: var(--bg2-color);
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--bg2-color);
+  padding: 3px;
+}
+.card-image .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg-color);
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0044ff;
+}
+.swiper-navBtn {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: var(--bg-color);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  /* content: ""; */
+  font-size: 40px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination.bullet {
+  background-color: #5900ff;
+  opacity: 1;
+}
+.swiper-pagination.bullet:active {
+  background-color: #4070f4;
+}
+/* ============== Testimonial Section end ================ */
+
+/* ============== Services Section end ================ */
 
 .show-menu {
   background-color: var(--bg-color);
@@ -727,6 +1036,183 @@ section {
   }
 
   /* ==============Tablet Skills Section end================ */
+
+  /* ============== Project Section start ================ */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4%;
+    margin-top: 39px;
+    padding: 30px;
+  }
+  .project-grid .project-image {
+    width: 330px;
+    height: 220px;
+  }
+  .data {
+    width: 330px;
+    height: 220px;
+    border-radius: 10px;
+  }
+  .project-grid .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .data:hover .project-content {
+    height: 100%;
+    opacity: 1;
+  }
+
+  .project-content big {
+    font-size: 20px;
+  }
+  .project-content p {
+    font-size: 85%;
+    font-weight: 500;
+    margin: 5px 2px 1px 2px;
+  }
+  .project-content a i {
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 13px 13px;
+  }
+  /* ==============Tablet Project Section start================ */
+
+  /* ==============Tablet Project Section end================ */
+
+  /* ==============Tablet Services Section start================ */
+  #services-section {
+    background-color: var(--bg2-color);
+    padding-block: 3%;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+    padding-block: 5%;
+  }
+  .services-list {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 4%;
+    transition: 1s;
+  }
+
+  .services-icon i {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .services-name h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .services-name p {
+    font-size: 75%;
+  }
+
+  /* ============== Testimonial Section start ================ */
+  #testimonial-section p {
+    font-size: 90%;
+  }
+  /* .arrow{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+  } */
+  .image-content {
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .slide-content {
+    margin: 30px 10px;
+    border-radius: 25px;
+  }
+
+  .card {
+    border-radius: 25px;
+    background-color: var(--bg2-color);
+    width: 60%;
+    
+  }
+  .overlay {
+    background-color: var(--bg-color);
+    border-radius: 25px 25px 0 35px;
+  }
+  .overlay::before,
+  .overlay::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-color);
+  }
+  .overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: var(--bg2-color);
+  }
+  .card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: var(--bg2-color);
+  }
+
+  .name {
+    font-size: 100%;
+    font-weight: 500;
+  }
+  .description {
+    font-size: 20%;
+    font-weight: 500;
+  }
+  .button {
+    font: 16%;
+    padding: 8px 16px;
+    margin: 14px;
+  }
+
+  .swiper-navBtn {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+  }
+
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+    /* content: ""; */
+    font-size: 40px;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: -230px;
+  
+  }
+ 
+  /* ============== Testimonial Section end ================ */
+
+  /* ==============Tablet Services Section end================ */
 }
 
 /* ============= Max width of 600px screen Start =============== */
@@ -869,6 +1355,117 @@ section {
   }
 
   /* ==============Tablet Skills Section end================ */
+
+  /* ============== Project Section start ================ */
+
+  #project-section {
+    padding: 10%;
+    /* display: unset; */
+  }
+  .project {
+    margin: unset;
+  }
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 39px;
+    padding: unset;
+    width: 100%;
+  }
+  .data {
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+  .project-grid .project-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-grid .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .data:hover .project-content {
+    height: 100%;
+    padding: 10% 5%;
+    opacity: 1;
+  }
+
+  .project-content big {
+    font-size: 20px;
+  }
+  .project-content p {
+    font-size: 85%;
+    font-weight: 500;
+    margin: 1px 2px 1px 2px;
+  }
+  .project-content a i {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin-bottom: 5%;
+  }
+  /* ==============Tablet Project Section start================ */
+
+  /* ==============Tablet Project Section end================ */
+
+  /* ==============Tablet Services Section start================ */
+  #services-section {
+    background-color: var(--bg2-color);
+    padding-block: 3%;
+  }
+  #services-section p {
+    font-size: 80%;
+    padding-block: unset;
+    padding-block: 4%;
+  }
+
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    padding-block: 5%;
+  }
+  .services-list {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 4%;
+    transition: 1s;
+  }
+
+  .services-icon i {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .services-name h2 {
+    font-size: 100%;
+    font-weight: 600;
+  }
+  .services-name p {
+    font-size: 75%;
+  }
+
+  /* ==============Tablet Services Section end================ */
 }
 
 /* ============= Max width of 600px screen End =============== */
@@ -1093,6 +1690,96 @@ section {
   }
 
   /* ==============Tablet Skills Section end================ */
+
+  /* ============== Project Section start ================ */
+
+  #project-section {
+    padding: 10%;
+    /* display: unset; */
+  }
+  .project {
+    margin: unset;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 39px;
+    padding: unset;
+    width: 100%;
+  }
+  .data {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+  .project-grid .project-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .data:hover .project-content {
+    height: 100%;
+    padding: 10% 5%;
+    opacity: 1;
+  }
+
+  .project-content big {
+    font-size: 20px;
+  }
+  .project-content p {
+    font-size: 85%;
+    font-weight: 500;
+    margin: 1px 2px 1px 2px;
+  }
+  .project-content a i {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin-bottom: 1%;
+  }
+  /* ============== Project Section start================ */
+
+  /* ============== Project Section end================ */
+
+  /* ============== Services Section start================ */
+  #services-section {
+    padding-block: 3%;
+  }
+  #services-section p {
+    font-size: 70%;
+    padding-block: 4%;
+  }
+
+  .services-grid {
+    gap: 3%;
+    padding-block: 5%;
+  }
+  .services-list {
+    gap: 4%;
+  }
+
+  .services-icon i {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 100%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-name h2 {
+    font-size: 100%;
+    font-weight: 600;
+  }
+  .services-name p {
+    font-size: 75%;
+  }
+
+  /* ==============Tablet Services Section end================ */
 }
 
 /* ============= Mobile L screen End =============== */
@@ -1265,6 +1952,88 @@ section {
     padding-bottom: 0.5%;
     margin-top: 8%;
   }
+
+  /* ============== Project Section start ================ */
+
+  #project-section {
+    padding: 10%;
+    /* display: unset; */
+  }
+  .project p {
+    font-size: 70%;
+  }
+
+  .project-grid {
+    margin-top: 3px;
+    padding: unset;
+    width: 100%;
+  }
+  .data {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+
+  .data:hover .project-content {
+    height: 100%;
+    padding: 10% 5%;
+    opacity: 1;
+  }
+
+  .project-content big {
+    font-size: 20px;
+  }
+  .project-content p {
+    font-size: 85%;
+    font-weight: 500;
+    margin: 1px 2px 1px 2px;
+  }
+  .project-content a i {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin-bottom: 1%;
+  }
+  /* ============== Project Section start================ */
+
+  /* ============== Project Section end================ */
+
+  /* ============== Services Section start================ */
+  #services-section {
+    padding-block: 3%;
+  }
+  #services-section p {
+    font-size: 70%;
+    padding-block: 4%;
+  }
+
+  .services-grid {
+    gap: 3%;
+    padding-block: 5%;
+  }
+  .services-list {
+    gap: 4%;
+  }
+
+  .services-icon i {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 100%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-name h2 {
+    font-size: 100%;
+    font-weight: 600;
+  }
+  .services-name p {
+    font-size: 70%;
+  }
+
+  /* ==============Tablet Services Section end================ */
 
   /* ==============Tablet Skills Section end================ */
 }

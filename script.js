@@ -65,3 +65,10 @@ setInterval(() => {
 }, 30);
 
 //Facts section start
+
+
+// Testimonial section swipper start
+
+
+
+// Testimonial section swipper end
