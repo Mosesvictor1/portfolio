@@ -43,6 +43,7 @@ section {
   padding: 1.5%;
   opacity: 100%;
   justify-content: space-between;
+  z-index: 999;
 }
 
 .profile {
@@ -644,10 +645,10 @@ section {
 }
 .slide-content {
   margin: 30px 40px;
-  /* background-color: red; */
   overflow: hidden;
   border-radius: 25px;
 }
+
 /* .card-wrapper{
   display: flex;
   justify-content: space-between;
@@ -748,6 +749,53 @@ section {
 .swiper-pagination.bullet:active {
   background-color: #4070f4;
 }
+
+/* Feedback links */
+
+.review-conc {
+  position: relative;
+}
+.back-to-website {
+  position: absolute;
+  bottom: -5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 6%;
+  z-index: 99;
+}
+.back-to-website a {
+  color: white;
+  font-size: 100%;
+  font-weight: 500;
+  background-color: rgb(228, 0, 186);
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px;
+  animation: bg 3s infinite;
+}
+.back-to-website a i {
+  margin-right: 9px;
+}
+
+@keyframes bg {
+  30% {
+    background-color: red;
+  }
+  60% {
+    background-color: #0a0077;
+  }
+  100% {
+    background-color: #01c801;
+  }
+}
+
 /* ============== Testimonial Section end ================ */
 
 /* ============== Services Section end ================ */
@@ -1314,6 +1362,21 @@ section {
     left: -230px;
   }
 
+  /* Feedback start */
+
+  .back-to-website {
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+    width: unset;
+    height: 5%;
+  }
+  .back-to-website a {
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 1px 5px;
+  }
+  /* Feedback end */
   /* ============== Testimonial Section end ================ */
 
   /* ============== Contact Section start ================ */
@@ -1986,6 +2049,24 @@ section {
     font-size: 75%;
   }
 
+  /* feedback start */
+
+  .back-to-website {
+    position: absolute;
+    bottom: -3.5%;
+    left: 10%;
+    width: unset;
+    height: 5%;
+  }
+  .back-to-website a {
+    font-size: 100%;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 1px 5px;
+  }
+
+  /* feedback end */
+
   /* ==============Tablet Services Section end================ */
 }
 
@@ -2286,6 +2367,15 @@ section {
     padding: 1.9%;
   }
   /* ============== Contact Section end ================ */
+
+    /* feedback start */
+
+    .back-to-website {
+      height: 4%;
+    }
+   
+  
+    /* feedback end */
 }
 
 /* ============= Mobile L screen End =============== */

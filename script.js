@@ -1,3 +1,6 @@
+//-> import productsData
+// import { testimonyData } from "./Testimonies";
+
 // Nav toggle start
 
 let navContainer = document.querySelector("#nav-container");
@@ -64,11 +67,93 @@ setInterval(() => {
   }
 }, 30);
 
-//Facts section start
+// class Products {
+//   //-> while loading the page get products from api end point
+//   getProducts() {
+//     return testimonyData;
+//   }
+// }
+
+/*============ Build our products data ==============*/
+
+ const testimonyData = [
+  {
+    id: 1,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+
+  {
+    id: 2,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+  {
+    id: 3,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+  {
+    id: 4,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+
+  {
+    id: 5,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+  {
+    id: 6,
+    imageUrl: "images/profile1.jpg",
+    name: "Moses",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+    button: "View More",
+  },
+];
 
 
-// Testimonial section swipper start
+const testimonyDOM = document.querySelector(".card-wrapper");
+console.log(testimonyDOM)
+console.log(testimonyData)
 
-
-
-// Testimonial section swipper end
+displayProducts(testimonyData)
+function displayProducts(products) {
+      let result = "";
+  
+      products.forEach((item) => {
+        result += ` <div class="card swiper-slide">
+                  <div class="image-content">
+                   <span class="overlay"></span>
+                   <div class="card-image">
+                     <img src="${item.imageUrl}" alt="customer profile" class="card-img">
+                   </div>
+   
+                  </div>
+                  <div class="card-content">
+                   <h2 class="name">${item.name}</h2>
+                   <p class="description">${item.description}</p>
+                   <button class="button">${item.button}</button>
+                  </div>
+                </div>`;
+      });
+  
+      testimonyDOM.innerHTML = result;
+    }
