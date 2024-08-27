@@ -76,7 +76,7 @@ setInterval(() => {
 
 /*============ Build our products data ==============*/
 
- const testimonyData = [
+const testimonyData = [
   {
     id: 1,
     imageUrl: "images/profile1.jpg",
@@ -129,17 +129,16 @@ setInterval(() => {
   },
 ];
 
-
 const testimonyDOM = document.querySelector(".card-wrapper");
-console.log(testimonyDOM)
-console.log(testimonyData)
+console.log(testimonyDOM);
+console.log(testimonyData);
 
-displayProducts(testimonyData)
+displayProducts(testimonyData);
 function displayProducts(products) {
-      let result = "";
-  
-      products.forEach((item) => {
-        result += ` <div class="card swiper-slide">
+  let result = "";
+
+  products.forEach((item) => {
+    result += ` <div class="card swiper-slide">
                   <div class="image-content">
                    <span class="overlay"></span>
                    <div class="card-image">
@@ -153,7 +152,39 @@ function displayProducts(products) {
                    <button class="button">${item.button}</button>
                   </div>
                 </div>`;
-      });
-  
-      testimonyDOM.innerHTML = result;
-    }
+  });
+
+  testimonyDOM.innerHTML = result;
+}
+
+// project-link
+let projectLink = document.querySelectorAll(".project-link");
+
+projectLink.forEach((e) => {
+  e.addEventListener("click", () =>
+    alert("Project link not yet available (Still in progress)")
+  );
+});
+
+
+// <!-- ================== Reavel js section ================== -->
+window.addEventListener("scroll", reveal);
+       
+        function reveal(){
+            var reveals = document.querySelectorAll(".reveal");
+
+
+            for(var i =0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 160;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        // <!-- ================== Reavel js section end================== -->

@@ -53,11 +53,13 @@ section {
   justify-content: center;
 }
 .profile img {
-  width: 160px;
+  width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 9px solid var(--button-color);
   margin-bottom: 19px;
+  object-fit: cover;
+  object-position: center;
 }
 .profile h2 a {
   color: var(--nav-text-color);
@@ -905,6 +907,20 @@ section {
   background-color: #b500b8;
 }
 /* ============== Contact Section end ================ */
+
+/* ============== scrol reveal start ================ */
+
+.reveal {
+  position: relative;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* ============== scrol reveal end ================ */
 
 .show-menu {
   background-color: var(--bg-color);
@@ -2368,14 +2384,13 @@ section {
   }
   /* ============== Contact Section end ================ */
 
-    /* feedback start */
+  /* feedback start */
 
-    .back-to-website {
-      height: 4%;
-    }
-   
-  
-    /* feedback end */
+  .back-to-website {
+    height: 4%;
+  }
+
+  /* feedback end */
 }
 
 /* ============= Mobile L screen End =============== */
