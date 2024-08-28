@@ -6,6 +6,11 @@
   text-decoration: none;
   list-style-type: none;
 }
+a {
+  color: white;
+  text-decoration: none;
+ 
+}
 html {
   scroll-behavior: smooth;
 }

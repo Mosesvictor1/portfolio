@@ -79,52 +79,57 @@ setInterval(() => {
 const testimonyData = [
   {
     id: 1,
-    imageUrl: "images/profile1.jpg",
-    name: "Moses",
+    imageUrl: "images/mic1.jpg",
+    name: "Micheal	Adeyanju",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "It has been good learnt new things. I really appreciated the step-by-step guidance and the real-world examples provided throughout the course. I can confidently say that I've grown as a developer, and I'm excited to apply the new skills I've gained. Thank you!",
     button: "View More",
+    websiteLink: "https://micheal-jpg.github.io/Portfolio/",
   },
 
   {
     id: 2,
-    imageUrl: "images/profile1.jpg",
-    name: "Moses",
+    imageUrl: "images/bash2.jpg",
+    name: "Mustapha Eneji",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "Firstly I found coding language difficult, so as time goes I discovered that I have to face my challenges. It's my race and i will come out grate.  Though It was a tough time while I was creating my website, but  i feel more confident  now and ready to apply them.",
     button: "View More",
+    websiteLink: "https://bash822.github.io/lastport/",
   },
   {
     id: 3,
-    imageUrl: "images/profile1.jpg",
-    name: "Moses",
+    imageUrl: "images/tm1.jpg",
+    name: "Jonas Mike",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "Working with Victor Moses on my web development project was a fantastic experience. He did not only delivered a flawless website but also provided excellent design recommendations that took my project to the next level.",
     button: "View More",
+    websiteLink: "https://www.fenriz-gym.com/",
   },
   {
     id: 4,
-    imageUrl: "images/profile1.jpg",
-    name: "Moses",
+    imageUrl: "images/avatar5.jpg",
+    name: "Henry",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "Victor Moses has an incredible talent for both designing and developing websites. his expertise shines through in the quality of his work, and he is always willing to go the extra mile to ensure everything was perfect. I was impressed with his professionalism.",
     button: "View More",
+    websiteLink: "https://www.annscottage.com/",
   },
 
   {
     id: 5,
-    imageUrl: "images/profile1.jpg",
-    name: "Moses",
+    imageUrl: "images/tm2.jpg",
+    name: "Cynthia Jonas",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "The design and development work from Victor Moses was outstanding! He brought my ideas to life with a stunning website. His teaching skills also helped me understand the technical side, making the process much more collaborative and rewarding",
     button: "View More",
+    websiteLink: "https://www.labaton.com/",
   },
   {
     id: 6,
-    imageUrl: "images/profile1.jpg",
+    imageUrl: "images/tm6.jpg",
     name: "Moses",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor impedit tenetur nulla at cupiditate mollitia iusto maiores enim quibusdam architecto harum doloremque, in dolores vel voluptas excepturi delectus illum magnam?",
+      "I couldn’t have asked for a better experience with Victor Moses. He handled everything from development to design with great attention to detail, and his teaching approach helped me understand the process. The final product was not only beautiful but also functional.",
     button: "View More",
   },
 ];
@@ -149,7 +154,7 @@ function displayProducts(products) {
                   <div class="card-content">
                    <h2 class="name">${item.name}</h2>
                    <p class="description">${item.description}</p>
-                   <button class="button">${item.button}</button>
+                   <button class="button"><a target="_blank" href=${item.websiteLink}>${item.button}</a></button>
                   </div>
                 </div>`;
   });
@@ -166,25 +171,23 @@ projectLink.forEach((e) => {
   );
 });
 
-
 // <!-- ================== Reavel js section ================== -->
 window.addEventListener("scroll", reveal);
-       
-        function reveal(){
-            var reveals = document.querySelectorAll(".reveal");
 
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
 
-            for(var i =0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 160;
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 160;
 
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }else{
-                    reveals[i].classList.remove('active');
-                }
-            }
-        }
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
 
-        // <!-- ================== Reavel js section end================== -->
+// <!-- ================== Reavel js section end================== -->
